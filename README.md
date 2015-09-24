@@ -14,7 +14,6 @@ To help the user know about current stocks per sentiment in the past few days, f
 
 #To use
 oauth2 library and Twitter REST API
-Possibly Twython
 
 #Layout
 
