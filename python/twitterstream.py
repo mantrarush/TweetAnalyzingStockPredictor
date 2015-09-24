@@ -2,7 +2,7 @@
 import oauth2 as oauth
 import urllib2 as urllib
 
-# See Assignment 1 instructions or README for how to get these credentials
+# Have to get your own acces, from your twitter account
 access_token_key = "3180870002-gEynSKVJw9nCKqWUyt3dFWn69NRASJcLdBfgWs2"
 access_token_secret = "Y1YP6osFrDlnUj72WQx9kFy7da4dJ4tgB5Qj2mqmucybA"
 
