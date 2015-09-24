@@ -3,11 +3,11 @@ import oauth2 as oauth
 import urllib2 as urllib
 
 # See Assignment 1 instructions or README for how to get these credentials
-access_token_key = "3180870002-lPMRiI59qArm8BYulSBSGu8vSwfAW5GBrHvbOFJ"
-access_token_secret = "ySVLmjFKK8OyltfTuxat94H4oy8zb0L7V8NASy3qQgT55"
+access_token_key = "3180870002-gEynSKVJw9nCKqWUyt3dFWn69NRASJcLdBfgWs2"
+access_token_secret = "Y1YP6osFrDlnUj72WQx9kFy7da4dJ4tgB5Qj2mqmucybA"
 
-consumer_key = "xafy9TJYal4avh1K9hA3WBaZp"
-consumer_secret = "HWefquw6UiqvjhdVbFV8tqutiJyK3hmWEl51jf3Tl5dVv89T0r"
+consumer_key = "3nTX6bRAPNAMwGpN5mMVV5T4X"
+consumer_secret = "WvLzHfLyALdT63z2XLiD3BRSACutqg91WtTC8p5A8g55Ryf5DA"
 
 _debug = 0
 #OAuth 1 is for user authenticated calls (tweeting, following people
