@@ -1,0 +1,93 @@
+REST= representational state transfer; resource based
+> resource(REST) vs action based (SOAP)
+>representations between client and servers
+
+Service: GET
+Rep: name,address, phone (JSON format)
+
+Interface(between client and server):
+HTTP verbs: GET , PUT , POST, DELETE
+URIs: resource name
+HTTP reponse: status, body
+
+Each request should have enough info.
+
+Cachability
+
+RESTful - as a client you don't know whether it is from cache or from database,
+acts as a layered system - to improve scalability from server side
+
+Code on demand constraint- from server to client (executable)n could be transferred
+to the client , like Java applet.
+
+--------------------
+Elasticsearch
+
+
+Relational DB  ⇒ Databases ⇒ Tables ⇒ Rows      ⇒ Columns
+Elasticsearch  ⇒ Indices   ⇒ Types  ⇒ Documents ⇒ Fields
+
+Configures node to be allowed to store data (locally or otherwise)
+Locally=> shards of different indices are allowed to be allocated on that node
+Each node is a data node by default  ( turned off by node.data = false )
+Client node: smart load balancers
+
+A node is a running instance of Elasticsearch.
+A cluster is a group of nodes with the same cluster.name that are working
+together to share data and to provide failover and scale, although a single
+node can form a cluster all by itself.
+
+All other languages can communicate with Elasticsearch over port 9200
+using a RESTful API, accessible with your favorite web client.
+In fact, as you have seen, you can even talk to Elasticsearch from
+the command line by using the curl command.
+
+Note:Elasticsearch returns HTTP status code like 200 OK and (except for HEAD)
+>HEAD checks whether document exists
+>To replace an existing document with an updated version, we just PUT it again.
+curl -X<VERB> '<PROTOCOL>://<HOST>/<PATH>?<QUERY_STRING>' -d '<BODY>'
+VERB: GET, POST, PUT, HEAD, DELETE
+PROTOCOL: https, http
+HOST: localhost
+PORT: The port running the Elasticsearch HTTP service, which defaults to 9200
+QUERY_STRING: Any optional query-string parameters (for example ?pretty will
+  pretty-print the JSON response to make it easier to read.)
+BODY: A JSON-encoded request body (if the request needs one.)
+
+To count # of docs in cluster:
+
+curl -XGET 'http://localhost:9200/_count?pretty' -d '
+{
+    "query": {
+        "match_all": {}
+    }
+}
+'
+
+
+Index(noun) vs Index(verb)
+A place to store related docs vs to index a document is to store a document
+  in an index (noun) so that it can be retrieved and queried.
+
+A document belongs to a type, and those types live inside an index.The act of
+storing data in Elasticsearch is called indexing.
+
+
+PUT /megacorp/employee/1
+-megacorp: index name
+-employee:type name
+-1: ID of the employee
+
+Query DSL:
+
+GET /megacorp/employee/_search
+{
+    "query" : {
+        "match" : {
+            "last_name" : "Smith"
+        }
+    }
+}
+
+Light search:
+GET /megacorp/employee/_search?q=last_name:Smith
