@@ -1,15 +1,15 @@
-#Movie trend Analysis
+#Stock Analysis
 
-To help the user learn about the movie trends per sentiment in the past few days, for short term investments
+To help the user know about current stocks per sentiment in the past few days, for short term investments
 
 
 #Goals
 
--To analyze tweets for a genre in a given time frame
+-To analyze tweets for a given stock in a given time frame
 
--To analyze blogs and verbatim in a given time frame
+-Possibly store the stocks the user has recently bought 
 
--To conclude whether a movie would be a good choice or not
+-To conclude whether a stock would be a buy or sell
 
 
 #To use
