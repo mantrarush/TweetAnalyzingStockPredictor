@@ -2,7 +2,7 @@
 
 import cPickle
 from nltk.classify import NaiveBayesClassifier
-from naivebayes import NBSentimentClassifier
+from naivebay import NBSentimentClassifier
 import os
 import sys
 
