@@ -12,7 +12,7 @@ import json
 from pymongo import MongoClient
 import action
 import stockretriever
-import correlation
+import correlator
 from email.utils import parsedate_tz
 from datetime import date
 stemmer = SnowballStemmer("english")
